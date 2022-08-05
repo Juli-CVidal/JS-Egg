@@ -1,15 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
     <title>13 - ObjetoPersona</title>
   </head>
   <body>
-    
+    <div class="p-5 border w-75 mx-autop-5 border w-75 mx-auto">
+      <h4 class="form-group">Ingrese su información personal:</h4>
+      <form class="needs-validation" id="registro" novalidate>
+        <div class="mb-3">
+          <label for="name" class="form-label">Ingrese su nombre:</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            id="name"
+            placeholder="Ex: Julián"
+            required
+          />
+          <div class="invalid-feedback">No ha indicado su nombre</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="gender" class="form-label">Ingrese su género:</label>
+          <select class="form-select" name="gender" id="gender" required>
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="height" class="form-label"
+            >Ingrese su altura en metros</label
+          >
+          <input
+            class="form-control"
+            type="number"
+            name="height"
+            id="height"
+            min="0"
+            step="0.01"
+            placeholder="Ex: 1.6"
+            required
+          />
+          <div class="invalid-feedback">No ha especificado su altura</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="weight" class="form-label">Ingrese su peso en kgs </label>
+          <input
+            class="form-control"
+            type="number"
+            name="weight"
+            id="weight"
+            min="0"
+            placeholder="65kg"
+            required
+          />
+          <div class="invalid-feedback">No ha ingresado su peso</div>
+        </div>
+
+        <button class="btn btn-primary" id="registrar" type="submit">
+          Registrarme
+        </button>
+      </form>
+
+      <h3 id="resultado" class="text-center"></h3>
+    </div>
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
-  </html>
+</html>
